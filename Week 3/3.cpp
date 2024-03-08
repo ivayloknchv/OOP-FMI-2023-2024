@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+
 namespace Constants
 {
 	constexpr size_t MAX_SIZE = 25;
