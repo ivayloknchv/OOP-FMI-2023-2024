@@ -310,7 +310,7 @@ int main()
 	 gp.addGame(g2);
 	 gp.addGame(g3);
 
-	 gp.sortByCriteria([](const Game& lhs, const Game& rhs) -> bool {return strcmp(lhs.getTitle(), rhs.getTitle()); });
+	 gp.sortByCriteria([](const Game& lhs, const Game& rhs) -> bool {return strcmp(lhs.getTitle(), rhs.getTitle())>0; });
 
 	 gp.writeToFile("games.txt");
 
