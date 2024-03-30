@@ -55,7 +55,7 @@ GraduatedStudent& GraduatedStudent::operator=(const GraduatedStudent& other)
 
 void GraduatedStudent::setName(const char* newName)
 {
-	if (!newName)
+	if (!newName || name == newName)
 	{
 		return;
 	}
@@ -69,7 +69,7 @@ void GraduatedStudent::setName(const char* newName)
 
 void GraduatedStudent::setGrades(const int* newGrades, int newGradesCount)
 {
-	if (!newGrades)
+	if (!newGrades || grades == newGrades)
 	{
 		return;
 	}
