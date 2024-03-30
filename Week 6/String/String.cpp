@@ -21,7 +21,7 @@ void String::free()
 
 void String::setStr(const char* newStr)
 {
-	if (!newStr)
+	if (!newStr || str == newStr)
 	{
 		return;
 	}
