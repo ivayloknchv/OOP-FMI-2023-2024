@@ -55,18 +55,6 @@ void numberSeries::addToSeries(int startIdx)
 	nextIdx = size;
 }
 
-bool numberSeries::isNumInAllocatedMemebers(int num) const
-{
-	for (int i = 0; i < nextIdx; i++)
-	{
-		if (series[i] == num)
-		{
-			return true;
-		}
-	}
-	return false;
-}
-
 numberSeries::numberSeries() = default;
 
 numberSeries::numberSeries(const numberSeries & other)
@@ -134,5 +122,12 @@ int numberSeries::getNumByIndex(int idx)
 
 bool numberSeries::isNumInSeries(int n) const
 {
-	return isNumInAllocatedMemebers(n);
+	for (int i = 0; i < nextIdx; i++)
+	{
+		if (series[i] == n)
+		{
+			return true;
+		}
+	}
+	return false;
 }
