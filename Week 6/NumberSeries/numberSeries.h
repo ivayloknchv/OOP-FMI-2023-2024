@@ -14,7 +14,6 @@ class numberSeries
 	void reAllocateSeries(int newSize);
 	void addToSeries(int startIdx);
 
-	bool isNumInAllocatedMemebers(int num)const;
 
 public:
 
