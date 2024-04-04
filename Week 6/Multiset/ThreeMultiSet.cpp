@@ -95,7 +95,22 @@ unsigned MultiSet::getTotalCount() const
 
 	for (unsigned i = 0; i < limit;i++)
 	{
-		count += getOccurances(i);=
+		count += getOccurances(i);
+	}
+
+	return count;
+}
+
+unsigned MultiSet::uniqueCount() const
+{
+	int count = 0;
+
+	for (unsigned i = 0; i < limit; i++)
+	{
+		if (getOccurances(i) == 1)
+		{
+			count++;
+		}
 	}
 
 	return count;

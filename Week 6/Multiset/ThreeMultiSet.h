@@ -36,6 +36,7 @@ public:
 	void removeAll();
 	unsigned getOccurances(unsigned num) const;
 	unsigned getTotalCount() const;
+	unsigned uniqueCount() const;
 	void printSet() const;
 
 	unsigned getMax() const;
