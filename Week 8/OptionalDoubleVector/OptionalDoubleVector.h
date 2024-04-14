@@ -35,6 +35,6 @@ public:
 	int getCapacity() const;
 	bool isEmpty() const;
 
-	OptionalDouble operator[](int index);
+	OptionalDouble& operator[](int index);
 	const OptionalDouble& operator[](size_t index) const;
 };
