@@ -126,7 +126,7 @@ void WordSet::removeString(const char* word, int idx)
 		nodes[i] = nodes[i + 1];
 	}
 
-	nodes[size].data = nullptr;
+	nodes[size - 1].data = nullptr;
 	size--;
 }
 
