@@ -74,7 +74,7 @@ void Dictionary::resize(int newCapacity)
 	temp = nullptr;
 }
 
-int Dictionary::findWord(const char* word, bool& isFound)
+int Dictionary::findWord(const char* word, bool& isFound) const
 {
 	isFound = 0;
 
