@@ -21,7 +21,7 @@ private:
 	void moveFrom(Dictionary&& other);
 	void free();
 
-	int findWord(const char* word, bool& isFound);
+	int findWord(const char* word, bool& isFound) const;
 	void resize(int newCapacity);
 
 	void addInternal(int idx, const char* word, const char* description);
