@@ -1,0 +1,17 @@
+#pragma once
+#include "Player.h"
+
+class LoggedInUser: public Player
+{
+	static constexpr int MAX_LEN = 8;
+	char password[MAX_LEN] = {};
+
+public:
+
+	LoggedInUser(const char* password);
+
+	void setPassword(const char* password);
+
+	bool logIn(int id, const char* password) const;
+};
+
