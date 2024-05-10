@@ -19,7 +19,7 @@ public:
 	PremiumPlayer& operator=(const PremiumPlayer& other);
 	PremiumPlayer(PremiumPlayer&& other) noexcept;
 	PremiumPlayer& operator=(PremiumPlayer&& other) noexcept;
-	~PremiumPlayer();
+	~PremiumPlayer() override;
 
 	bool levelUp() override;
 	const char* getName() const;
