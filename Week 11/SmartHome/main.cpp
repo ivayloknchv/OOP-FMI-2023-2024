@@ -9,7 +9,6 @@ int main()
 {
 	SmartSpeaker sp("speaker", "sony", 34);
 	SmartHome home;
-	home.add(&sp);
 	
 	home.addTheromstat("thermo", "tesy", 28, 30);
 	home.showAll();

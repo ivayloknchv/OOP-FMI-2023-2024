@@ -106,37 +106,25 @@ void SmartHome::add(Device* device)
 		resize(2 * capacity);
 	}
 
-	data[size++] = device->clone();
+	data[size++] = device;
 }
 
 void SmartHome::addLight(const char* name, const char* manufacturer, unsigned brightnessLevel)
 {
-	if (size == capacity)
-	{
-		resize(2 * capacity);
-	}
-
-	data[size++] = new SmartLight(name, manufacturer, brightnessLevel);
+	Device *temp = new SmartLight(name, manufacturer, brightnessLevel);
+	add(temp);
 }
 
 void SmartHome::addTheromstat(const char* name, const char* manufacturer, double currentTemperature, double targetTemperature)
 {
-	if (size == capacity)
-	{
-		resize(2 * capacity);
-	}
-
-	data[size++] = new SmartThermostat(name, manufacturer, currentTemperature, targetTemperature);
+	Device* temp = new SmartThermostat(name, manufacturer, currentTemperature, targetTemperature);
+	add(temp);
 }
 
 void SmartHome::addSpeaker(const char* name, const char* manufacturer, unsigned volume)
 {
-	if (size == capacity)
-	{
-		resize(2 * capacity);
-	}
-
-	data[size++] = new SmartSpeaker(name, manufacturer, volume);
+	Device* temp = new SmartSpeaker(name, manufacturer, volume);
+	add(temp);
 }
 
 void SmartHome::removeByIdx(size_t idx)

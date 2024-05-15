@@ -18,6 +18,8 @@ private:
 
 	void resize(size_t newCapacity);
 
+	void add(Device* device);
+
 public:
 
 	SmartHome();
@@ -26,8 +28,6 @@ public:
 	SmartHome(SmartHome&& other) noexcept;
 	SmartHome& operator=(SmartHome&& other) noexcept;
 	~SmartHome();
-
-	void add(Device* device);
 
 	void addLight(const char* name, const char* manufacturer, unsigned brightnessLevel);
 
