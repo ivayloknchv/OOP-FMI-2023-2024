@@ -37,7 +37,7 @@ void MonstersCollection::moveFrom(MonstersCollection&& other)
 {
 	for (size_t i = 0; i < currentSize; i++)
 	{
-		data[i] = other.data[i]->clone();
+		data[i] = other.data[i];
 		other.data[i] = nullptr;
 	}
 
