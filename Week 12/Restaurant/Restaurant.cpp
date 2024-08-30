@@ -16,7 +16,7 @@ void Restaurant::copyFrom(const Restaurant& other)
 
 void Restaurant::moveFrom(Restaurant&& other)
 {
-	_data = nullptr;
+	_data = other._data;
 	other._data = nullptr;
 
 	_size = other._size;
@@ -118,6 +118,7 @@ void Restaurant::removeProduct(size_t idx)
 	}
 
 	std::swap(_data[idx], _data[_size - 1]);
+	delete _data[_size-1];
 	--_size;
 }
 
